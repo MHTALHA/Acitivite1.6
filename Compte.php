@@ -3,7 +3,7 @@ declare(strict_types=1);
 class Compte {
         private static int $nbCompte=0;
         private int $code=0;
-        private float $solde=0;
+        protected float $solde=0;
         private const UNITE = "€";
 
     public function __construct(float $solde)
@@ -30,8 +30,12 @@ public function consulterSolde(){
 
 }
 
-$compte1=new Compte(50000);
-$compte2=new Compte(50.5);
-echo $compte1->deposer(10);
-$compte1->consulterSolde();
+// $compte1=new Compte(50000);
+// $compte2=new Compte(50.5);
+// echo $compte1->deposer(10);
+// $compte1->consulterSolde();
 // echo $compte1->retirer(10);
+
+
+//$compte4=new ComptePayant(50000);
+
