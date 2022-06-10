@@ -5,9 +5,9 @@ class ComptePayant extends Compte
 
     private float $TauxRetrait=2;
 
+  
 
-
-    public function retirer(float $montant):float
+    public function retirer(float $montant)
 
     {
 
@@ -28,7 +28,7 @@ class ComptePayant extends Compte
 }
 
 $compte3=new ComptePayant(100);
-echo $compte3->retirer(28);
+echo $compte3->retirer(50);
 
 
 

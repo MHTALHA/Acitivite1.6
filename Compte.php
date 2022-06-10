@@ -19,8 +19,8 @@ class Compte {
 public function  deposer(float $newSolde):float{
     return $this->solde=$newSolde+$this->solde;
 }
-public function retirer(float $newSolde):float{
-    return $this->solde=$this->solde-$newSolde;
+public function retirer(float $newSolde){
+  return $this->solde=$this->solde-$newSolde;
 }
 public function consulterSolde(){
     $sld=number_format($this->solde,2,',',' ');
