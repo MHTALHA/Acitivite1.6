@@ -3,7 +3,7 @@ require_once 'Compte.php';
 class ComptePayant extends Compte
 {
 
-    private float $TauxRetrait=2;
+    private  const  TAUX_RETRAIT=2;
 
   
 
@@ -11,9 +11,9 @@ class ComptePayant extends Compte
 
     {
 
-        if($montant > 0 && $this->solde >= ($montant+$this->TauxRetrait)){
+        if($montant > 0 && $this->solde >= ($montant+self::TAUX_RETRAIT)){
 
-           return $this->solde -= ($montant+$this->TauxRetrait);
+           return $this->solde -= ($montant+self::TAUX_RETRAIT);
 
         }else{
 
